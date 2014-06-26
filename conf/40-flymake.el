@@ -1,0 +1,16 @@
+(when (require 'flymake nil t)
+  (when (require 'flymake-python-pyflakes nil t)
+    (add-hook 'python-mode-hook 'flymake-python-pyflakes-load))
+  (setq flymake-gui-warnings-enabled nil)
+  ;(add-hook 'find-file-hook 'flymake-find-file-hook)
+  (defun my-flymake-display-err-popup.el-for-current-line ()
+    "Display a menu with errors/warnings for current line if it has errors and/or warnings."
+    (interactive)
+    (let* ((line-no            (flymake-current-line-no))
+           (line-err-info-list (nth 0 (flymake-find-err-info flymake-err-info line-no)))
+           (menu-data          (flymake-make-err-menu-data line-no line-err-info-list)))
+      (if menu-data
+          (popup-tip (mapconcat '(lambda (e) (nth 0 e))
+                                (nth 1 menu-data)
+                                "\n")))))
+  (define-key global-map (kbd "C-c d") 'my-flymake-display-err-popup.el-for-current-line))

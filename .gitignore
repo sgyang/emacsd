@@ -1,0 +1,8 @@
+compile-*
+auto-save-list/**
+history
+tramp
+ac-comphist.dat
+elpa/archives/**
+elpa/nxml-mode-20041004/stamp-byte-compile
+*.elc
