@@ -1,8 +1,13 @@
 compile-*
+*.elc
+
 auto-save-list/**
 history
 tramp
 ac-comphist.dat
+saved-places
+
 elpa/archives/**
 elpa/nxml-mode-20041004/stamp-byte-compile
-*.elc
+
+.python-environments/**

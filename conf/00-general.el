@@ -17,8 +17,13 @@
 (setq history-length 10000)
 (savehist-mode 1)
 
+;; save place
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file "~/.emacs.d/saved-places")
+
 ;; appearance
-(setq-default show-trailing-whitespace t)
+;(setq-default show-trailing-whitespace t)
 (blink-cursor-mode 0)
 (column-number-mode t)
 (line-number-mode t)
@@ -35,3 +40,7 @@
 ;; indent
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+
+;; uniquify
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward)

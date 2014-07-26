@@ -6,9 +6,6 @@
 (setq auto-mode-alist
       (append '(("\\.h$" . c++-mode)) auto-mode-alist))
 
-;; python-mode
-(require 'python-mode nil t)
-
 ;; js2-mode
 (when (require 'js2-mode nil t)
   (defun js-indent-hook ()
