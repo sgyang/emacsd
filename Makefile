@@ -17,7 +17,7 @@ elisp: compile-elisp
 elpa: compile-elpa
 
 compile-elisp:
-	$(EMACS) -Q $(ELISP_DIR) -batch -eval $(EVAL) \
+	$(EMACS) -Q -L $(ELISP_DIR) -batch -eval $(EVAL) \
 		-eval '(byte-recompile-directory "./$(ELISP_DIR)" 0)'
 	@touch $@
 
