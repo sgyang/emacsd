@@ -6,14 +6,6 @@
 (setq auto-mode-alist
       (append '(("\\.h$" . c++-mode)) auto-mode-alist))
 
-;; js2-mode
-(when (require 'js2-mode nil t)
-  (defun js-indent-hook ()
-    (setq js-indent-level 2
-          js-expr-indent-offset 2
-          indent-tabs-mode nil))
-  (add-hook 'js-mode-hook 'js-indent-hook))
-
 ;; php-mode
 (when (require 'php-mode nil t)
   (add-to-list 'auto-mode-alist
