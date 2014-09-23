@@ -13,8 +13,9 @@
 (set-face-foreground 'popup-tip-face "black")
 
 ;; time
-(setq ac-delay 0.3)
-(setq ac-auto-show-menu 0.3)
+(setq ac-delay 0.2)
+(setq ac-auto-show-menu 0.2)
+(setq ac-quick-help-delay 0.2)
 
 ;; using C-p C-n instead of M-p M-n
 (setq ac-use-menu-map t)
