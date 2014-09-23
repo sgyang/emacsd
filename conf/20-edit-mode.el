@@ -31,3 +31,8 @@
             (setq nxml-child-indent 2)
             (setq indent-tabs-mode nil)
             (setq tab-width 2)))
+
+;; markdown-mode
+(when (require 'markdown-mode nil t)
+  (add-to-list 'auto-mode-alist
+               '("\\.md\\'" . markdown-mode)))
