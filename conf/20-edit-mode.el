@@ -36,3 +36,8 @@
 (when (require 'markdown-mode nil t)
   (add-to-list 'auto-mode-alist
                '("\\.md\\'" . markdown-mode)))
+
+;; yaml-mode
+(when (require 'yaml-mode nil t)
+  (add-to-list 'auto-mode-alist
+               '("\\.yml$" . yaml-mode)))
