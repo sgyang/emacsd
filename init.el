@@ -15,3 +15,7 @@
 ;; init-loader
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/conf")
+
+;; load environment variables
+(let ((envs '("PATH" "GOROOT" "GOPATH")))
+  (exec-path-from-shell-copy-envs envs))
