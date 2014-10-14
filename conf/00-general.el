@@ -24,18 +24,17 @@
 
 ;; appearance
 ;(setq-default show-trailing-whitespace t)
-(blink-cursor-mode 0)
-(column-number-mode t)
-(line-number-mode t)
-(size-indication-mode t)
 (setq require-final-newline t)
-(menu-bar-mode nil)
-(when window-system
-  (tool-bar-mode nil)
-  (scroll-bar-mode nil)
-)
 (setq show-paren-delay 0)
-(show-paren-mode t)
+(custom-set-variables
+ '(blink-cursor-mode nil)
+ '(column-number-mode t)
+ '(line-number-mode t)
+ '(size-indication-mode t)
+ '(menu-bar-mode t)
+ '(tool-bar-mode nil)
+ '(scroll-bar-mode nil)
+ '(show-paren-mode t))
 
 ;; indent
 (setq-default tab-width 4)
