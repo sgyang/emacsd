@@ -6,9 +6,9 @@
 
 ;; color
 (set-face-background 'ac-completion-face "#333333")
-(set-face-foreground 'ac-candidate-face "#666666")
+(set-face-foreground 'ac-candidate-face "black")
 (set-face-background 'ac-selection-face "#666666")
-(set-face-foreground 'popup-summary-face "pink")
+(set-face-foreground 'popup-summary-face "magenta")
 (set-face-background 'popup-tip-face "yellow")
 (set-face-foreground 'popup-tip-face "black")
 
