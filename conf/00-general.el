@@ -40,6 +40,9 @@
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
+;; auto revert mode
+(global-auto-revert-mode 1)
+
 ;; uniquify
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward)
