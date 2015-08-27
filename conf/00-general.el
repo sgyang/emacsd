@@ -18,9 +18,9 @@
 (savehist-mode 1)
 
 ;; save place
-(require 'saveplace)
-(setq-default save-place t)
-(setq save-place-file "~/.emacs.d/saved-places")
+(when (require 'saveplace nil t)
+  (setq-default save-place t)
+  (setq save-place-file "~/.emacs.d/saved-places"))
 
 ;; appearance
 ;(setq-default show-trailing-whitespace t)
@@ -44,5 +44,5 @@
 (global-auto-revert-mode 1)
 
 ;; uniquify
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward)
+(when (require 'uniquify nil t)
+  (setq uniquify-buffer-name-style 'post-forward))

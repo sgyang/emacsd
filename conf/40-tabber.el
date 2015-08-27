@@ -1,4 +1,3 @@
-(require 'cl)
 (when (require 'tabbar nil t)
   (setq tabbar-buffer-groups-function nil)
   (setq tabbar-buffer-list-function

@@ -1,5 +1,7 @@
 ;; python-mode
-(require 'python-mode nil t)
+(when (require 'python-mode nil t)
+  ;; whitespace
+  (whitespace-mode)
 
-;; jedi
-(add-hook 'python-mode-hook 'jedi:setup)
+  ;; jedi
+  (add-hook 'python-mode-hook 'jedi:setup))
