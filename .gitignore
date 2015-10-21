@@ -6,6 +6,7 @@ history
 tramp
 ac-comphist.dat
 saved-places
+recentf
 
 elpa/archives/**
 elpa/nxml-mode-20041004/stamp-byte-compile

@@ -8,3 +8,4 @@
 (define-key global-map (kbd "C-h") 'delete-backward-char)
 (define-key global-map (kbd "C-2") 'set-mark-command)
 (define-key global-map (kbd "M-;") 'comment-dwim-2)
+(define-key global-map (kbd "C-x M-k") 'kill-other-buffers)
