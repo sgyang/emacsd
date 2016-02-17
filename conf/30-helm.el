@@ -1,6 +1,14 @@
 (when (require 'helm-config nil t)
   (helm-mode 1)
 
+  (when (not window-system)
+    (custom-set-faces
+     '(helm-match ((t (:foreground "yellow"))))
+     '(helm-selection ((t (:background "green" :distant-foreground "black"))))
+     '(helm-source-header
+       ((t (:background "black" :foreground "white" :weight bold
+                        :height 1.3 :family "Sans Serif"))))))
+
   (define-key global-map (kbd "M-x")     'helm-M-x)
   (define-key global-map (kbd "C-x C-f") 'helm-find-files)
   (define-key global-map (kbd "C-x C-r") 'helm-recentf)
